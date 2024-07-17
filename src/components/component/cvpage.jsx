@@ -457,7 +457,7 @@ export function cvpage() {
             prefetch={false}
   >
           <p className="text-muted-foreground text-sm flex items-center gap-2">
-  <img src="/hf_logo.png" alt="Hugging Face" className="h-6 w-6 inline-block" />Hugging Face</p></Link>
+  <img src="/hf_logo.png" alt="Hugging Face" className="h-6 w-6 inline-block" />HF</p></Link>
         </div>
       </footer>
     </div>)
