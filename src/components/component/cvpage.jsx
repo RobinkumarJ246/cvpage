@@ -1,7 +1,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
-import { FaAward, FaBrain, FaCalendarAlt, FaEnvelope, FaGit, FaGithub, FaHandSparkles, FaJava, FaLightbulb, FaLinkedin, FaLinux, FaMailBulk, FaMapMarkerAlt, FaMedal, FaNodeJs, FaPython, FaReact, FaRobot, FaStar, FaTasks, FaTrophy, FaVoicemail } from 'react-icons/fa';
+import { FaArrowAltCircleUp, FaArrowRight, FaAward, FaBook, FaBookOpen, FaBookReader, FaBrain, FaCalendarAlt, FaDoorOpen, FaDotCircle, FaEnvelope, FaGit, FaGithub, FaHandSparkles, FaHeart, FaInfo, FaJava, FaLightbulb, FaLinkedin, FaLinux, FaLongArrowAltRight, FaMailBulk, FaMapMarkerAlt, FaMedal, FaNodeJs, FaPython, FaReact, FaRobot, FaStar, FaTasks, FaTrophy, FaVoicemail } from 'react-icons/fa';
 import Link from "next/link"
 
 export function cvpage() {
@@ -219,6 +219,20 @@ export function cvpage() {
     <section>
           <h2 className="text-xl font-bold mb-4">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="bg-muted rounded-lg overflow-hidden">
+              <img
+                src="/saff.jpg"
+                width="400"
+                height="225"
+                alt="Project 3"
+                className="w-full h-40 object-cover" />
+              <div className="p-4">
+                <h3 className="text-lg font-medium">OptiSaff</h3>
+                <p className="text-sm text-muted-foreground">
+                  A project aiming to increase and optimize the production of Saffrons using IoT and Artificial Intelligence. This focuses on the intelligent cultivation and harvesting of saffron in a controlled environment.
+                </p>
+              </div>
+            </div>
             <div className="bg-muted rounded-lg overflow-hidden">
               <img
                 src="/smartblink_logo.jpeg"
@@ -238,27 +252,46 @@ export function cvpage() {
                 src="/inx.jpeg"
                 width="400"
                 height="225"
-                alt="Project 2"
-                className="w-full h-40 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg font-medium">Innovatronix</h3>
-                <p className="text-sm text-muted-foreground">
-                  An offline SmartHome solution embedded with a light weight Language model which can converse and control the smart devices. The Control Device is built in such a way it is compatible with most of the smart devices using Matter and MQTT protocol. These messages are then obtained as input prompts from the user through an app.
-                </p>
-              </div>
-            </div>
-            <div className="bg-muted rounded-lg overflow-hidden">
-              <img
-                src="/saff.jpg"
-                width="400"
-                height="225"
                 alt="Project 3"
-                className="w-full h-40 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg font-medium">OptiSaff</h3>
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 flex flex-col items-start gap-4">
+                <h3 className="text-lg font-medium">ChatDataGen</h3>
                 <p className="text-sm text-muted-foreground">
-                  A project aiming to increase and optimize the production of Saffrons using IoT and Artificial Intelligence. This focuses on the intelligent cultivation and harvesting of saffron in a controlled environment.
+                An offline SmartHome solution embedded with a light weight Language model which can converse and control the smart devices. The Control Device is built in such a way it is compatible with most of the smart devices using Matter and MQTT protocol. These messages are then obtained as input prompts from the user through an app.
                 </p>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="ghost" className='bg-blue-200 hover:bg-blue-300'><FaBookOpen className='mr-3' />Read more</Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[425px]">
+                    <div className="flex flex-col items-center justify-center gap-4 py-8">
+                      <p>The project is in Beta development and an early stage prototype is hosted in Huggingface. Due to resource constraints the AI model development takes considerable delay and issues. Any support will be appreciated.</p>
+                      <div className="flex gap-2">
+                        <div><Link href="https://huggingface.co/spaces/Robin246/inxai_steamlit"
+                        target="_blank" rel="noopener noreferrer">
+                          <Button type="button"><FaArrowRight className='mr-3' />Try it</Button></Link>
+                        </div>
+                        <div>
+                        <Link href="https://huggingface.co/Robin246/inxai_v1.1"
+                        target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline" className='bg-blue-300 hover:bg-blue-200' type="button">
+                          <FaInfo className='mr-3' />Model card
+                          </Button>
+                          </Link>
+                        </div>
+                        <div>
+                        <Link href="https://forms.office.com/r/EeTsx50znH"
+                        target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline" className='bg-green-500 hover:bg-green-400' type="button">
+                          <FaHeart className='mr-3' />Support
+                          </Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
             <div className="bg-muted rounded-lg overflow-hidden">
@@ -276,7 +309,7 @@ export function cvpage() {
                 </p>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="ghost" className='bg-blue-200 hover:bg-blue-300'>Try it</Button>
+                    <Button variant="ghost" className='bg-blue-200 hover:bg-blue-300'>Try it <FaArrowRight className='ml-3' /></Button>
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-[425px]">
                     <div className="flex flex-col items-center justify-center gap-4 py-8">
@@ -284,12 +317,13 @@ export function cvpage() {
                       <div className="flex gap-2">
                         <div><Link href="https://chatdatagen.in.net"
                         target="_blank" rel="noopener noreferrer">
-                          <Button type="button">Continue visit</Button></Link>
+                          <Button type="button"><FaDoorOpen className='mr-3' />Continue visit</Button></Link>
                         </div>
                         <div>
-                        <Link href="https://forms.office.com/r/EeTsx50znH">
+                        <Link href="https://forms.office.com/r/EeTsx50znH"
+                        target="_blank" rel="noopener noreferrer">
                           <Button variant="outline" className='bg-green-500 hover:bg-green-400' type="button">
-                            Support
+                          <FaHeart className='mr-3' />Support
                           </Button>
                           </Link>
                         </div>
