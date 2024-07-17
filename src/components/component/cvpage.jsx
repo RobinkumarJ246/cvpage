@@ -256,7 +256,7 @@ export function cvpage() {
                 className="w-full h-40 object-cover"
               />
               <div className="p-4 flex flex-col items-start gap-4">
-                <h3 className="text-lg font-medium">ChatDataGen</h3>
+                <h3 className="text-lg font-medium">Innovatronix</h3>
                 <p className="text-sm text-muted-foreground">
                 An offline SmartHome solution embedded with a light weight Language model which can converse and control the smart devices. The Control Device is built in such a way it is compatible with most of the smart devices using Matter and MQTT protocol. These messages are then obtained as input prompts from the user through an app.
                 </p>
