@@ -276,8 +276,7 @@ export function cvpage() {
                         <Link href="https://huggingface.co/Robin246/inxai_v1.1"
                         target="_blank" rel="noopener noreferrer">
                           <Button variant="outline" className='bg-blue-300 hover:bg-blue-200' type="button">
-                          <FaInfo className='mr-3' />Model card
-                          </Button>
+                          <FaInfo className='mr-3' />Info                          </Button>
                           </Link>
                         </div>
                         <div>
