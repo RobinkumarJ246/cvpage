@@ -1,7 +1,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
-import { FaArrowAltCircleUp, FaArrowRight, FaAward, FaBook, FaBookOpen, FaBookReader, FaBrain, FaCalendarAlt, FaDoorOpen, FaDotCircle, FaEnvelope, FaGit, FaGithub, FaHandSparkles, FaHeart, FaInfo, FaJava, FaLightbulb, FaLinkedin, FaLinux, FaLongArrowAltRight, FaMailBulk, FaMapMarkerAlt, FaMedal, FaNodeJs, FaPython, FaReact, FaRobot, FaStar, FaTasks, FaTrophy, FaVoicemail } from 'react-icons/fa';
+import { FaArrowAltCircleUp, FaArrowRight, FaAward, FaAws, FaBook, FaBookOpen, FaBookReader, FaBrain, FaCalendarAlt, FaCertificate, FaDoorOpen, FaDotCircle, FaEnvelope, FaGit, FaGithub, FaHackerrank, FaHandSparkles, FaHeart, FaInfo, FaJava, FaKaggle, FaLightbulb, FaLinkedin, FaLinux, FaLongArrowAltRight, FaMailBulk, FaMapMarkerAlt, FaMedal, FaNodeJs, FaPython, FaReact, FaRobot, FaStar, FaTasks, FaTrophy, FaVoicemail } from 'react-icons/fa';
 import Link from "next/link"
 
 export function cvpage() {
@@ -216,6 +216,91 @@ export function cvpage() {
 </div>
           </div>
         </section>
+        <section>
+          <h2 className="text-xl font-bold mb-4">Certifications</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="bg-muted rounded-lg p-4 flex flex-col items-start gap-2">
+  <div className="flex items-center gap-2">
+    <h3 className="text-lg font-medium">GenAI with LLMs</h3>
+  </div>
+  <div className="flex items-center gap-2">
+    <FaAws className="text-lg" />
+    <p className="text-sm text-muted-foreground">AWS and DeepLearning.ai</p>
+  </div>
+  <p className="text-sm text-muted-foreground">Issued on: June 2024</p>
+  <p className="text-sm text-muted-foreground">Skills Learned: LLMs, Transformer, AWS Sagemaker</p>
+  <p className="text-sm text-muted-foreground">Mode: Online</p>
+  <div className="flex items-center gap-2 ml-auto">
+    <FaAward />
+    <Link href="https://coursera.org/share/e2dd06c41dbb802f905f8cfa11284599">
+      <Button variant="ghost">
+        View Certificate
+      </Button>
+    </Link>
+  </div>
+</div>
+  <div className="bg-muted rounded-lg p-4 flex flex-col items-start gap-2">
+    <div className="flex items-center gap-2">
+      <h3 className="text-lg font-medium">ReactJS</h3>
+    </div>
+    <div className="flex items-center gap-2">
+      <FaHackerrank className="text-lg" />
+      <p className="text-sm text-muted-foreground">Hackerrank</p>
+    </div>
+    <p className="text-sm text-muted-foreground">Issued on: July 2024</p>
+    <p className="text-sm text-muted-foreground">Skills Learned: ReactJS</p>
+    <p className="text-sm text-muted-foreground">Mode: Online</p>
+    <div className="flex items-center gap-2 ml-auto">
+    <FaAward />
+    <Link href="https://www.hackerrank.com/certificates/0f3dd9dc0602">
+      <Button variant="ghost">
+        View Certificate
+      </Button>
+    </Link>
+  </div>
+  </div>
+  <div className="bg-muted rounded-lg p-4 flex flex-col items-start gap-2">
+    <div className="flex items-center gap-2">
+      <h3 className="text-lg font-medium">Data Visulaization</h3>
+    </div>
+    <div className="flex items-center gap-2">
+      <FaKaggle className="text-lg" />
+      <p className="text-sm text-muted-foreground">Kaggle</p>
+    </div>
+    <p className="text-sm text-muted-foreground">Issued on: October 2023</p>
+    <p className="text-sm text-muted-foreground">Skills Learned: Matplot library, Seaborn, Pandas</p>
+    <p className="text-sm text-muted-foreground">Mode: Online</p>
+    <div className="flex items-center gap-2 ml-auto">
+    <FaAward />
+    <Link href="https://www.kaggle.com/learn/certification/robinkumar246j/data-visualization">
+      <Button variant="ghost">
+        View Certificate
+      </Button>
+    </Link>
+  </div>
+  </div>
+  <div className="bg-muted rounded-lg p-4 flex flex-col items-start gap-2">
+    <div className="flex items-center gap-2">
+      <h3 className="text-lg font-medium">Python</h3>
+    </div>
+    <div className="flex items-center gap-2">
+      <FaHackerrank className="text-lg" />
+      <p className="text-sm text-muted-foreground">Hackerrank</p>
+    </div>
+    <p className="text-sm text-muted-foreground">Issued on: April 2024</p>
+    <p className="text-sm text-muted-foreground">Skills Learned: Python</p>
+    <p className="text-sm text-muted-foreground">Mode: Online</p>
+    <div className="flex items-center gap-2 ml-auto">
+    <FaAward />
+    <Link href="https://www.hackerrank.com/certificates/80fc75279736">
+      <Button variant="ghost">
+        View Certificate
+      </Button>
+    </Link>
+  </div>
+  </div>
+          </div>
+        </section>
     <section>
           <h2 className="text-xl font-bold mb-4">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -420,8 +505,7 @@ function CheckIcon(props) {
   )
 }
 
-
-function CodeIcon(props) {
+function BadgeIcon(props) {
   return (
     <svg
       {...props}
@@ -435,8 +519,7 @@ function CodeIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <polyline points="16 18 22 12 16 6" />
-      <polyline points="8 6 2 12 8 18" />
+      <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
     </svg>
   )
 }
