@@ -1,7 +1,8 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
-import { FaArrowAltCircleUp, FaArrowRight, FaAward, FaAws, FaBook, FaBookOpen, FaBookReader, FaBrain, FaCalendarAlt, FaCertificate, FaDoorOpen, FaDotCircle, FaEnvelope, FaGit, FaGithub, FaHackerrank, FaHandSparkles, FaHeart, FaInfo, FaJava, FaKaggle, FaLightbulb, FaLinkedin, FaLinux, FaLongArrowAltRight, FaMailBulk, FaMapMarkerAlt, FaMedal, FaNodeJs, FaPython, FaReact, FaRobot, FaStar, FaTasks, FaTrophy, FaVoicemail } from 'react-icons/fa';
+import {FaArrowRight, FaArrowUp, FaAward, FaAws, FaBook, FaBookOpen, FaBookReader, FaBrain, FaCalendarAlt, FaCertificate, FaDoorOpen, FaDotCircle, FaEnvelope, FaGit, FaGithub, FaHackerrank, FaHandSparkles, FaHeart, FaInfo, FaJava, FaKaggle, FaLightbulb, FaLinkedin, FaLinux, FaLongArrowAltRight, FaMailBulk, FaMapMarkerAlt, FaMedal, FaNodeJs, FaPython, FaReact, FaRobot, FaStar, FaTasks, FaTrophy, FaVoicemail } from 'react-icons/fa';
+import { TiSpanner } from "react-icons/ti";
 import Link from "next/link"
 
 export function cvpage() {
@@ -231,9 +232,9 @@ export function cvpage() {
   <p className="text-sm text-muted-foreground">Skills Learned: LLMs, Transformer, AWS Sagemaker</p>
   <p className="text-sm text-muted-foreground">Mode: Online</p>
   <div className="flex items-center gap-2 ml-auto">
-    <FaAward />
     <Link href="https://coursera.org/share/e2dd06c41dbb802f905f8cfa11284599">
-      <Button variant="ghost">
+      <Button className = 'bg-blue-100 hover:bg-blue-200' variant="ghost">
+      <FaAward className='mr-2' />
         View Certificate
       </Button>
     </Link>
@@ -251,9 +252,9 @@ export function cvpage() {
     <p className="text-sm text-muted-foreground">Skills Learned: ReactJS</p>
     <p className="text-sm text-muted-foreground">Mode: Online</p>
     <div className="flex items-center gap-2 ml-auto">
-    <FaAward />
     <Link href="https://www.hackerrank.com/certificates/0f3dd9dc0602">
-      <Button variant="ghost">
+    <Button className = 'bg-blue-100 hover:bg-blue-200' variant="ghost">
+      <FaAward className='mr-2' />
         View Certificate
       </Button>
     </Link>
@@ -271,9 +272,9 @@ export function cvpage() {
     <p className="text-sm text-muted-foreground">Skills Learned: Matplot library, Seaborn, Pandas</p>
     <p className="text-sm text-muted-foreground">Mode: Online</p>
     <div className="flex items-center gap-2 ml-auto">
-    <FaAward />
     <Link href="https://www.kaggle.com/learn/certification/robinkumar246j/data-visualization">
-      <Button variant="ghost">
+    <Button className = 'bg-blue-100 hover:bg-blue-200' variant="ghost">
+      <FaAward className='mr-2' />
         View Certificate
       </Button>
     </Link>
@@ -291,9 +292,9 @@ export function cvpage() {
     <p className="text-sm text-muted-foreground">Skills Learned: Python</p>
     <p className="text-sm text-muted-foreground">Mode: Online</p>
     <div className="flex items-center gap-2 ml-auto">
-    <FaAward />
     <Link href="https://www.hackerrank.com/certificates/80fc75279736">
-      <Button variant="ghost">
+    <Button className = 'bg-blue-100 hover:bg-blue-200' variant="ghost">
+      <FaAward className='mr-2' />
         View Certificate
       </Button>
     </Link>
@@ -379,6 +380,10 @@ export function cvpage() {
               </div>
             </div>
             <div className="bg-muted rounded-lg overflow-hidden">
+            <div className='relative'>
+            <span className='flex items-center justify-center absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full'>
+            <TiSpanner className='mr-1'/>BETA</span>
+            
               <img
                 src="/cdgcover.jpeg"
                 width="400"
@@ -386,10 +391,11 @@ export function cvpage() {
                 alt="Project 3"
                 className="w-full h-40 object-cover"
               />
+              </div>
               <div className="p-4 flex flex-col items-start gap-4">
                 <h3 className="text-lg font-medium">ChatDataGen</h3>
                 <p className="text-sm text-muted-foreground">
-                  A project focusing on the scarcely available conversational datasets. This solutions aims at fostering a secure and open source community to contribute and collaborate conversational datasets in regional, colloquial, natural, coherent, vernacular and hybrid languages.
+                  A project focusing on the scarcely available conversational datasets. This solution aims on fostering a secure and open source community to contribute and collaborate conversational datasets in regional, colloquial, natural, coherent, vernacular and hybrid languages.
                 </p>
                 <Dialog>
                   <DialogTrigger asChild>
